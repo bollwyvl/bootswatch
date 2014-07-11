@@ -6295,7 +6295,7 @@ textarea.form-control:focus {
 .nav-tabs > li {
   background-color: #4285f4;
   float: left;
-  margin-bottom: -1px;
+  margin-bottom: 0;
 }
 .nav-tabs > li > a {
   padding-left: 24px;
