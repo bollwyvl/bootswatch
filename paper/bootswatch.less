@@ -16,11 +16,13 @@
 
 .navbar {
   border: none;
+  .raise-low;
 
   .form-control {
     color: #fff;
     border-color: #fff;
   }
+
 }
 
 // Buttons ====================================================================
@@ -134,4 +136,47 @@ textarea.form-control {
 
 .well {
   border: none;
+}
+
+// Tabs ======================================================================
+.nav-tabs {
+  border: none;
+  background-color: @nav-tabs-bg;
+  .raise-low();
+  > li {
+    background-color: @nav-tabs-bg;
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -1px;
+
+    // Actual tabs (as links)
+    > a {
+      padding-left: 24px;
+      padding-right: 24px ;
+      margin-right: 0;
+      margin-bottom: 2px;
+      border: none;
+      border-radius: 0 0 0 0;
+      text-transform: uppercase;
+      color: @nav-tabs-link-color;
+      &:hover {
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        margin-bottom: 0;
+        background-color: transparent;
+        border: none;
+        cursor: default;
+        border-bottom: 2px solid @nav-tabs-active-link-hover-border-color;
+        color: @nav-tabs-active-link-color;
+      }
+    }
+  }
 }

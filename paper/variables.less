@@ -13,11 +13,11 @@
 @gray-light:             lighten(#000, 46.7%); // #777
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #9c27b0; // purple 500
-@brand-success:         #259b24; // green 500
-@brand-info:            #00bcd4; // cyan 500
-@brand-warning:         #ff5722; // deep orange 500
-@brand-danger:          #e51c23; // red 500
+@brand-primary:          #9c27b0; // purple 500
+@brand-success:          #259b24; // green 500
+@brand-info:             #00bcd4; // cyan 500
+@brand-warning:          #ff5722; // deep orange 500
+@brand-danger:           #e51c23; // red 500
 
 
 //== Scaffolding
@@ -25,7 +25,7 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #f9f9f9;
 //** Global text color on `<body>`.
 @text-color:            @gray-dark;
 
@@ -63,7 +63,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    400;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -335,7 +335,7 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    50px;
+@navbar-height:                    64px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -344,7 +344,7 @@
 
 @navbar-default-color:             #f1f1f1;
 @navbar-default-bg:                #4285f4;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            none;
 
 // Navbar links
 @navbar-default-link-color:                @navbar-default-color;
@@ -406,13 +406,18 @@
 @nav-open-link-hover-color:                 #fff;
 
 //== Tabs
-@nav-tabs-border-color:                     #ddd;
+@nav-tabs-border-color:                     transparent;
+@nav-tabs-bg:                               @navbar-default-bg;
 
-@nav-tabs-link-hover-border-color:          @gray-lighter;
+@nav-tabs-link-hover-border-color:          transparent;
+
+@nav-tabs-link-color:                       @gray-lighter;
+
+@nav-tabs-active-link-color:                #fff;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @gray;
-@nav-tabs-active-link-hover-border-color:   #ddd;
+@nav-tabs-active-link-hover-border-color:   @brand-primary;
 
 @nav-tabs-justified-link-border-color:            #ddd;
 @nav-tabs-justified-active-link-border-color:     @body-bg;
@@ -842,5 +847,3 @@
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
-
-
